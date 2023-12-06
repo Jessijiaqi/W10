@@ -109,20 +109,20 @@ class Game:
         self._playerO = playerO
         self._game_id = time.time()
         self._first_square = None
-        self._first_player = None
+        
 
     def run(self):
         current_player = self._playerX
         winner = None
         game_start_time = time.time()
         first_row, first_col = None, None
-        first_player = self._playerX.symbol
+        first_player = None
 
     
         
         while winner is None:
-            if self._first_square is None:
-                self._first_player = current_player.symbol
+            if first_player is None:  
+                first_player = current_player.symbol
                 
             print_board(self._board.get_board())
 
@@ -159,7 +159,7 @@ class Game:
             'num_moves': self.calculate_total_moves(),
             'game_result_first_player': game_result,
             'first_input': f"{first_col + 1},{first_row + 1}",  # Adding 1 to row and column for human-friendly indexing
-            'first_player': self._first_player
+            'first_player': first_player
         }
         # game_data = {
         #     'game_id': self._game_id,
