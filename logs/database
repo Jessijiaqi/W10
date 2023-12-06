@@ -1,0 +1,9 @@
+game_id: 1701820144.3052785
+winner: Human (Player X)
+num_moves: 6
+playerX_symbol: X
+playerO_symbol: O
+game_result: Player X wins
+first_square: [[None, None, None], [None, None, None], [None, None, None]]
+first_player: X
+
